@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css">
+  <title>Duckstation Setup</title>
+</head>
+
+<body>
+  <h1>
+    Here is a small tutorial for using <a href="https://www.duckstation.org">Duckstation</a>
+  </h1>
+  <h2>A bit of background</h2>
+  <p>
+    I have no idea if you've emulated a console before, pretty much everything from the ps1
+    onwards requires more effort and setup and finding weird files than anything before it.
+    Firstly you need a BIOS file for the different versions of the console (JP, US, EU) which
+    should be legally obtained directly from the console, I have included all BIOS files in the
+    provided zip folder and will explain how to use them later.
+  </p>
+  <p>
+    Secondly you need a "dump" of the game disc which ofcourse should also be legally obtained
+    from a disc, or downloaded from an online repository. I have included Digimon World as well as
+    links and instructions for downloading more for yourself later. This will also be explained in
+    greater detail later.
+  </p>
+  <p>
+    Once you know how to download and install the games onto the emulator it's very easy to use,
+    it includes controller support, memory cards, save states, and lots of useful more modern
+    features which I haven't fully looked at.
+  </p>
+  <h2>What's included</h2>
+  <p>
+    In the zip folder I have provided is the installer for VC++ runtime (needed for duckstation),
+    the installer for duckstation, all of the necessary bios files, and Digimon World (Europe
+    edition) in a folder called "games"
+  </p>
+  <h2>Getting started</h2>
+  <ol>
+    <li>Unzip the zip file</li>
+    <li>Run the file <i>VC_redist.x64.exe</i> - This is a prerequisite install for duckstation, the default options
+      should be fine</li>
+    <li>Run <i>duckstation-windows-x64-installer.exe</i> to install Duckstation</li>
+    <li>Add whichever shortcuts you would like, and open it when it's installed</li>
+    <li>At this point you may have to make an exception in your windows security for the program to run properly,
+      details in the <a href="#issues">issues</a> section</li>
+  </ol>
+
+  <h2>Initial Duckstation Setup</h2>
+  <p>With Duckstation now running weäre greeted with an installation wizard and I'll walk through the steps here.</p>
+
+  <ol>
+    <li>On the first page you can select your language a theme, feel free to look through them, pick whatever you like
+    </li>
+    <img src="./img/duckstation-setup-1.png" alt="">
+    <li>Next it's asking us to install the BIOS files, these are in the provided folder titled <i>playstation-bios</i>.
+      On this screen select "Advanced Settings" > "Browse" and select the unzipped <i>playstation-bios</i> folder. If
+      done correctly, you should see "23 BIOS images found...". Click Next.</li>
+    <img src="./img/duckstation-setup-2.png" alt="">
+    <li>This section is similar to the last but for the games. So instead of selecting the <i>playstation-bios</i>
+      folder, select the <i>games</i> folder. It should prompt you for if you want to "Scan Recursively". Select yes,
+      this way you can unzip games directly into the <i>games</i> folder and duckstation will automatically find them.
+    </li>
+    <img src="./img/duckstation-setup-3.png" alt="">
+    <li>I don't know if you have a controller that youi will use for this, or if you want to just use a keyboard. If
+      you're using a keyboard you can just hit Next. Otherwise if you will use a controller, connect it now. Wait for a
+      second, then select "Automatic Mapping" and select your controller from a the dropdown list. Typically Playstation
+      style controllers are "DInput" and XBox styles controller are "XInput". The controls can be fully remapped later.
+    </li>
+    <li>In "Graphics Setup" you can just hit next, I'm certain there are some people who are opinionated about this
+      stuff, but I assume the defaults are fine</li>
+    <li>In the "RetroAchievements" section. Retro Achievements is a website that supports giving old games, modern style
+      achievements. If you care about this then feel free to setup an account and link it to duckstation. I assume it
+      will just work but I haven't tested it.</li>
+    <li>In "Interface Selection" I stuck with "Desktop Mode"</li>
+    <li>In "View Selection" I selected "Grid View" but this is personal preference and can be changed later</li>
+    <li>Setup is now complete, you can now play Digimon World byu double clicking the game in duckstation</li>
+  </ol>
+
+  <h2>Controller Setup</h2>
+  <p>In order to see what the keybindings are, or to change the controller you're using, follow these steps.</p>
+
+  <ol>
+    <li>On the main screen of Duckstation select "Settings"</li>
+    <li>In this dropdown select "Controllers"</li>
+    <li>On the left-hand side select "Controller Port 1 - Analog Contoller"</li>
+    <li>Here are your current keybinds, if you want to use a controller, first connect a controller then on this screen
+      click "Automatic Mapping" and select your controller from the dropdown.</li>
+    <li>Likewise if you want to switch to Keyboard controls, click "Automatic Mapping" and select "keyboard"</li>
+  </ol>
+
+  <h2>Finding new games and installing them to Duckstation</h2>
+  <p>People have dumped almost every game for the playstation 1 online, all you need is account on the <a
+      href="http://archive.org">Internet Archive</a>. Links to the game files for PS1 and pretty much every other game
+    console can be found <a href="https://r-roms.github.io/Sony/sony-playstation">here</a>.</p>
+  <p>Simply look for the list which contains your game. e.g. "Sony PlayStation (Part 1: #-D) - Redump.org" if you were
+    looking for "Digimon World" and click "Download". This will take you to The Internet Archive. Find the game you want
+    in the list and click it to download. Once downloaded unzip this game and then place it into the <i>games</i> folder
+    next to Digimon
+    World</p>
+  <img src="./img/new-games-1.png" alt="">
+  <img src="./img/new-games-2.png" alt="">
+  <p>In Duckstation you can then click "Settings" > "Rescan all games".</p>
+
+  <h2 id="issues">Issues</h2>
+  <p>When I tried to run duckstation for the first time, windows security prevented the application from working so I
+    had to make an exception.</p>
+  <ol>
+    <li>To do that, search "windows security" in the windows search bar, or open it through the windows settings</li>
+    <li>In Windows Security select "Virus & threat protection"</li>
+    <img src="./img/windows-security-1.png" alt="">
+    <li>In "Virus & threat protection settings" select "Manage settings"</li>
+    <img src="./img/windows-security-2.png" alt="">
+    <li>At the bottom select "Add or remove exclusions"</li>
+    <img src="./img/windows-security-3.png" alt="">
+    <li>Finally select "Add an exclusion" > "File" and then find the .exe for duckstation which should be in the
+      location <i>C:\Users\%YOURNAME%\AppData\Local\Programs\DuckStation</i> where <i>%YOURNAME%</i> will be replaced by
+      your user name. E.g mine is <i>C:\Users\Matthew\AppData\Local\Programs\DuckStation</i></li>
+    <img src="./img/windows-security-3.png" alt="">
+  </ol>
+
+  <h2>Happy Playing!!</h2>
+  <p>I think that's everything you need to know to get this up and running, I don't think I have forgotten anything but
+    feel free to message me if there's any issues and I can help :)</p>
+</body>
+
+</html>
